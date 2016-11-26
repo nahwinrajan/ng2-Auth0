@@ -1,1 +1,4 @@
-<h2>Hello there friend, this is the home component rendered</h2>
+<h2 class="page-header">Home</h2>
+<br>
+<h4 *ngIf="auth.authenticated()" class="text-success">you are logged in</h4>
+<h4 *ngIf="!auth.authenticated()" class="text-danger">you are not logged in</h4>

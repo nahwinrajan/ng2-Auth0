@@ -18,8 +18,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a routerLink="/profile" *ngIf="auth.authenticated()">Profile</a></li>
-        <li><a href="#" (click)="auth.login()" *ngIf="!auth.authenticated()">sign in</a></li>
-        <li><a href="#" (click)="auth.logout()" *ngIf="auth.authenticated()">sign out</a></li>
+        <li><a href="#" (click)="auth.login()" *ngIf="!auth.authenticated()">Login</a></li>
+        <li><a href="#" (click)="auth.logout()" *ngIf="auth.authenticated()">Logout</a></li>
       </ul>
     </div>
   </div>

@@ -11,7 +11,7 @@ export class Auth {
   constructor() {
     // add callback for lock 'authenticated' event
     this.lock.on("authenticated", (authResult:any) => {
-      this.lock.getProfile(authResult.idToken, (error:any, profile:any) => {
+      this.lock.getProfile(authResult.idToken, function(error:any, profile:any) {
         if(error) throw new Error(error);
         localStorage.setItem('profile', JSON.stringify(profile)); //set user profile in session
         localStorage.setItem('id_token', authResult.idToken); //set user id_token in session
